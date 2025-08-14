@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using Shared;
 
-namespace BMicroservice;
+namespace BMicroservice.Consumers;
 
 public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent>
 {

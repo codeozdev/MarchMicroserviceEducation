@@ -1,4 +1,4 @@
-using BMicroservice;
+using BMicroservice.Consumers;
 using MassTransit;
 using Scalar.AspNetCore;
 
