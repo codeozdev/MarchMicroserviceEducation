@@ -34,3 +34,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// Outbox pattern
