@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMicroservice", "BMicroserv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{6A874EEB-AD5E-4650-A2AE-517D615B47AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMicroservice", "CMicroservice\CMicroservice.csproj", "{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{6A874EEB-AD5E-4650-A2AE-517D615B47AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A874EEB-AD5E-4650-A2AE-517D615B47AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A874EEB-AD5E-4650-A2AE-517D615B47AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

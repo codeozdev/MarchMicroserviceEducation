@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using Shared;
 
-namespace BMicroservice.Consumers;
+namespace CMicroservice.Consumers;
 
 public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent>
 {
@@ -11,7 +11,7 @@ public class OrderCreatedEventConsumer : IConsumer<OrderCreatedEvent>
         OrderCreatedEvent message = context.Message;
         Guid? messageId = context.MessageId;
 
-        Console.WriteLine(value: "Consumer: B Microservice");
+        Console.WriteLine(value: "Consumer: C Microservice");
 
         // throw new Exception("db error"); (retry testi icin)
 
