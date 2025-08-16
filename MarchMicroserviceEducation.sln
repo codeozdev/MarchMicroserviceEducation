@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMicroservice", "CMicroservice\CMicroservice.csproj", "{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerExample.API", "DockerExample.API\DockerExample.API.csproj", "{AAE194CE-DB09-4B45-AED1-959993FBC5CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55799FF4-DF7C-4339-BAEB-EB4EC0B9677E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

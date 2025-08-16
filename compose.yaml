@@ -1,0 +1,60 @@
+﻿services:
+  # Development
+  dockerexample.api-dev:
+    image: dockerexampleapi-image
+    build:
+      context: .
+      dockerfile: DockerExample.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "5000:8080"
+    profiles: [ "dev" ]
+
+  # Test Ortamlari icin
+  dockerexample.api-staging:
+    image: dockerexampleapi-image
+    build:
+      context: .
+      dockerfile: DockerExample.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Staging
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings:SqlServer=Server=sqlserver,1433;Database=MarchMicroserviceEducation;User=sa;Password=Password12;Trusted_Connection=False;TrustServerCertificate=True;Integrated Security=False
+    ports:
+      - "5000:8080"
+    profiles: [ "staging" ]
+
+
+  # Production
+  dockerexample.api:
+    image: dockerexampleapi-image
+    build:
+      context: .
+      dockerfile: DockerExample.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - "80:80"
+    profiles: [ "prod" ]
+  
+  # Ortak (profiles vermedigimiz taktirde default olarak her zaman ayaga kalkar)
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    user: root
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=${SA_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver.volume:/var/opt/mssql
+
+volumes:
+  sqlserver.volume:
+
+
+# docker compose --profile staging up
+# docker compose --profile dev up
