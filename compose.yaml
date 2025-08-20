@@ -10,7 +10,7 @@
       - ASPNETCORE_HTTP_PORTS=8080
     ports:
       - "5000:8080"
-    profiles: [ "dev" ]
+    profiles: [ "dockerexample-dev" ]
 
   # Test Ortamlari icin
   dockerexample.api-staging:
@@ -24,7 +24,7 @@
       - ConnectionStrings:SqlServer=Server=sqlserver,1433;Database=MarchMicroserviceEducation;User=sa;Password=Password12;Trusted_Connection=False;TrustServerCertificate=True;Integrated Security=False
     ports:
       - "5000:8080"
-    profiles: [ "staging" ]
+    profiles: [ "dockerexample-staging" ]
 
 
   # Production
@@ -37,7 +37,7 @@
       - ASPNETCORE_ENVIRONMENT=Production
     ports:
       - "80:80"
-    profiles: [ "prod" ]
+    profiles: [ "dockerexample-prod" ]
   
   # Ortak (profiles vermedigimiz taktirde default olarak her zaman ayaga kalkar)
   sqlserver:
@@ -51,10 +51,42 @@
       - "1433:1433"
     volumes:
       - sqlserver.volume:/var/opt/mssql
+    profiles: [ "dockerexample-dev", "dockerexample-staging" ]
+
+  keycloak.api-dev:
+    image: keycloakapi-image
+    build:
+      context: .
+      dockerfile: Keycloak.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "5000:8080"
+    profiles: [ "keycloak-dev" ]
+
+  keycloak:
+    restart: always
+    container_name: keycloak-microservice-education
+    image: quay.io/keycloak/keycloak:25.0
+    command: start
+    environment:
+      KC_HOSTNAME_PORT: 8080
+      KC_HOSTNAME_STRICT_BACKCHANNEL: false
+      KC_HTTP_ENABLED: true
+      KC_HOSTNAME_STRICT_HTTPS: false
+      KC_HOSTNAME_STRICT: false
+      KC_HEALTH_ENABLED: true
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+    ports:
+      - "8080:8080"
+    profiles: [ "keycloak-dev" ]
+
 
 volumes:
   sqlserver.volume:
 
 
-# docker compose --profile staging up
+# docker compose --profile staging up --build
 # docker compose --profile dev up

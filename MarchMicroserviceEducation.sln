@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMicroservice", "CMicroserv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerExample.API", "DockerExample.API\DockerExample.API.csproj", "{AAE194CE-DB09-4B45-AED1-959993FBC5CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryOrder.API", "OpenTelemetryOrder.API\OpenTelemetryOrder.API.csproj", "{D1BF1111-51F9-45FC-9867-42F7ACAE90A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTelemetryStock.API", "OpenTelemetryStock.API\OpenTelemetryStock.API.csproj", "{7DC19C42-0714-4159-9435-C6B666C5DD9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,13 @@ Global
 		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAE194CE-DB09-4B45-AED1-959993FBC5CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1BF1111-51F9-45FC-9867-42F7ACAE90A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1BF1111-51F9-45FC-9867-42F7ACAE90A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1BF1111-51F9-45FC-9867-42F7ACAE90A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1BF1111-51F9-45FC-9867-42F7ACAE90A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC19C42-0714-4159-9435-C6B666C5DD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC19C42-0714-4159-9435-C6B666C5DD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC19C42-0714-4159-9435-C6B666C5DD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC19C42-0714-4159-9435-C6B666C5DD9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
